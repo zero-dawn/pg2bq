@@ -14,7 +14,8 @@ object Worker {
       .getOrCreate()
 
     val jdbc = new PostgreSqlExporter(spark, config.jdbc)
-    val bq = new BigQueryImporter(spark, config.gcloud.gcs.tmpBucket, config.gcloud.bq.dataset)
+    val bq =
+      new BigQueryImporter(spark, config.gcloud.gcs.tmpBucket, config.gcloud.bq)
 
     config.jdbc.tables.foreach { table =>
       val df = jdbc.read(table)

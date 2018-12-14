@@ -8,7 +8,8 @@ case class GCloudConfiguration(
 )
 
 case class BigQueryConfiguration(
-    dataset: String
+    dataset: String,
+    location: Option[String]
 )
 
 case class GcsConfiguration(

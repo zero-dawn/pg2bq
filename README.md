@@ -26,6 +26,7 @@ gcloud {
   project = "gcloud-project-id"
   service-account-key-path = "/path/to/service-account-key.json"
   bq.dataset = "mypg"
+  bq.location = "US"
   gcs.tmp-bucket = "pg-export-tmp"
 }
 ```
